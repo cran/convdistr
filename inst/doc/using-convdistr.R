@@ -7,7 +7,7 @@ summary.DISTRIBUTION <- function(object,...) {
   knitr::kable(convdistr:::summary.DISTRIBUTION(object,...), digits = 2)
 }
 
-## ---- fig.width=7-------------------------------------------------------------
+## ----fig.width=7--------------------------------------------------------------
 library(convdistr)
 library(ggplot2)
 
@@ -34,13 +34,13 @@ metadata(myDistr)
 rfunc(myDistr, 10)
 summary(myDistr)
 
-## ---- fig.width=5, fig.cap = "Figure with R plot"-----------------------------
+## ----fig.width=5, fig.cap = "Figure with R plot"------------------------------
 plot(myDistr)
 
-## ---- fig.width=5, fig.cap = "Figure with ggplot2"----------------------------
+## ----fig.width=5, fig.cap = "Figure with ggplot2"-----------------------------
 ggDISTRIBUTION(myDistr)
 
-## ---- fig.width = 5-----------------------------------------------------------
+## ----fig.width = 5------------------------------------------------------------
 d1 <- new_NORMAL(1,1)
 d2 <- new_UNIFORM(2,8)
 d3 <- new_POISSON(5)
@@ -51,7 +51,7 @@ summary(dsum)
 ggDISTRIBUTION(dsum)
 
 
-## ---- fig.width = 7-----------------------------------------------------------
+## ----fig.width = 7------------------------------------------------------------
 d1 <- new_NORMAL(1,0.5)
 d2 <- new_NORMAL(5,0.5)
 d3 <- new_NORMAL(10,0.5)
@@ -59,7 +59,7 @@ dmix <- new_MIXTURE(list(d1,d2,d3))
 summary(dmix)
 ggDISTRIBUTION(dmix)
 
-## ---- fig.with = 7------------------------------------------------------------
+## ----fig.with = 7-------------------------------------------------------------
 d1 <- new_MULTINORMAL(c(0,1), matrix(c(1,0.3,0.3,1), ncol = 2), p_dimnames = c("A","B"))
 d2 <- new_MULTINORMAL(c(3,4), matrix(c(1,0.3,0.3,1), ncol = 2), p_dimnames = c("B","C"))
 summary(d1)
